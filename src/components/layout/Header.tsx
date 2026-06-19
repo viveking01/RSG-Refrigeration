@@ -173,19 +173,19 @@ export default function Header() {
             </nav>
 
             {/* CTA */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2 shrink-0">
               <a
                 href={BUSINESS.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-semibold hover:bg-[#22c55e] transition-all hover:-translate-y-0.5 shadow-md"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-semibold hover:bg-[#22c55e] transition-all hover:-translate-y-0.5 shadow-md whitespace-nowrap"
               >
                 <MessageCircle size={15} />
                 WhatsApp
               </a>
               <a
                 href={BUSINESS.callUrl}
-                className="btn-primary text-sm px-5 py-2.5"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#0B1F66] text-white text-sm font-semibold hover:bg-[#1a3a8f] transition-all hover:-translate-y-0.5 shadow-md whitespace-nowrap"
               >
                 <Phone size={15} />
                 Call Now

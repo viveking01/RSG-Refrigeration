@@ -50,7 +50,7 @@ export default function CassetteACPage() {
               Professional installation, deep cleaning, and complex repairs for commercial and residential cassette ACs.
               Minimize downtime with our fast, reliable on-site technician response.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="cta-buttons-container justify-start">
               <a href={BUSINESS.callUrl} className="btn-secondary">
                 <Phone size={17} /> Call Now
               </a>

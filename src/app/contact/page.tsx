@@ -21,7 +21,7 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Hero */}
-      <section className="bg-hero py-14 relative overflow-hidden">
+      <section className="bg-hero pt-24 pb-14 md:pt-32 md:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern" />
         <div className="container-custom relative z-10 text-center">
           <div className="badge text-white/70 border border-white/20 bg-white/8 mx-auto mb-5">Get in Touch</div>

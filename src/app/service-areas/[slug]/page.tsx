@@ -116,7 +116,7 @@ export default async function LocationPage({ params }: Props) {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="cta-buttons-container justify-start">
               <a href={BUSINESS.callUrl} className="btn-secondary">
                 <Phone size={17} /> Call Now
               </a>
@@ -328,7 +328,7 @@ export default async function LocationPage({ params }: Props) {
             AC Repair in <span className="text-[#F5A623]">{location.name}</span>?
           </h2>
           <p className="text-white/60 mb-6">Call RSG Refrigeration — Same-day service, all brands covered.</p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="cta-buttons-container justify-center">
             <a href={BUSINESS.callUrl} className="btn-secondary">
               <Phone size={17} /> Call: {BUSINESS.phoneDisplay}
             </a>

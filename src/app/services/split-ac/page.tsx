@@ -50,7 +50,7 @@ export default function SplitACPage() {
               Comprehensive split AC solutions from installation to complex repairs. RSG Refrigeration's
               certified technicians handle every split AC issue with expertise.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="cta-buttons-container justify-start">
               <a href={BUSINESS.callUrl} className="btn-secondary">
                 <Phone size={17} /> Call Now
               </a>

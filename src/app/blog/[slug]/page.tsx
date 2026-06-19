@@ -494,7 +494,7 @@ export default async function BlogPostPage({ params }: Props) {
             Is Your AC Having Problems?
           </h2>
           <p className="text-white/60 mb-6">Expert diagnostic repairs and servicing within 2 hours across Hyderabad.</p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="cta-buttons-container justify-center">
             <a href={BUSINESS.callUrl} className="btn-secondary">
               <Phone size={17} /> Call: {BUSINESS.phoneDisplay}
             </a>

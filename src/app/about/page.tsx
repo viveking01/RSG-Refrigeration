@@ -156,7 +156,7 @@ export default function AboutPage() {
           <div className="bg-gradient-to-br from-[#0B1F66] to-[#1a3a8f] rounded-3xl p-8 md:p-10 text-center text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to Experience Premium AC Service?</h2>
             <p className="text-white/60 mb-6">Join 5,000+ satisfied customers across Hyderabad.</p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="cta-buttons-container justify-center">
               <a href={BUSINESS.callUrl} className="btn-secondary"><Phone size={17} /> Call Now</a>
               <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><MessageCircle size={17} /> WhatsApp</a>
               <Link href="/contact" className="btn-outline"><CalendarCheck size={17} /> Book Service</Link>

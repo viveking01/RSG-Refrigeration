@@ -21,10 +21,10 @@ const featuredServices = [
 
 export default function ServicesSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="py-16 md:py-20 bg-white overflow-hidden">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -49,14 +49,14 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="text-gray-500 text-lg"
+            className="text-gray-500 text-base md:text-lg"
           >
             From residential split ACs to large commercial VRF systems — we handle it all.
           </motion.p>
         </div>
 
         {/* AC Category Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {AC_CATEGORIES.map((cat, index) => {
             const Icon = categoryIcons[cat.icon] || AirVent;
             return (
@@ -69,19 +69,19 @@ export default function ServicesSection() {
               >
                 <Link
                   href={`/services/${cat.slug}`}
-                  className="card-service group block p-6 h-full"
+                  className="card-service group flex flex-col p-6 h-full"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-[#0B1F66]/8 flex items-center justify-center mb-5 group-hover:bg-[#0B1F66] transition-colors duration-300">
-                    <Icon size={26} className="text-[#0B1F66] group-hover:text-white transition-colors duration-300" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#0B1F66]/8 flex items-center justify-center mb-4 group-hover:bg-[#0B1F66] transition-colors duration-300 shrink-0">
+                    <Icon size={22} className="text-[#0B1F66] group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="font-bold text-[#111827] text-lg mb-2 group-hover:text-[#0B1F66] transition-colors">
+                  <h3 className="font-bold text-[#111827] text-base mb-2 group-hover:text-[#0B1F66] transition-colors leading-snug">
                     {cat.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{cat.description}</p>
-                  <div className="flex items-center justify-between">
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">{cat.description}</p>
+                  <div className="flex items-center justify-between pt-3 border-t border-gray-50">
                     <span className="text-xs text-gray-400">{cat.count}+ Services</span>
-                    <div className="flex items-center gap-1 text-[#0B1F66] text-sm font-medium group-hover:gap-2 transition-all">
-                      View All <ArrowRight size={14} />
+                    <div className="flex items-center gap-1 text-[#0B1F66] text-xs font-semibold group-hover:gap-2 transition-all">
+                      View All <ArrowRight size={13} />
                     </div>
                   </div>
                 </Link>
@@ -90,28 +90,33 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* Featured Quick Service Links */}
+        {/* Featured Quick Service Links - Split AC */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-br from-[#0B1F66] to-[#1a3a8f] rounded-3xl p-8 md:p-10"
+          className="relative bg-gradient-to-br from-[#07132e] via-[#0B1F66] to-[#1a3a8f] rounded-3xl p-6 md:p-8 overflow-hidden"
         >
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+          {/* Decorative orb */}
+          <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#F5A623] opacity-5 blur-2xl pointer-events-none" />
+
+          {/* Header row */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">Split AC Services</h3>
-              <p className="text-white/60 text-sm">Most popular residential AC services — quick booking, same-day service</p>
+              <h3 className="text-xl font-bold text-white">Split AC Services</h3>
+              <p className="text-white/50 text-sm mt-0.5">Quick booking • Same-day service</p>
             </div>
             <Link
               href="/services/split-ac"
-              className="mt-4 md:mt-0 flex items-center gap-2 text-[#F5A623] font-semibold text-sm hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-[#F5A623] font-semibold text-sm hover:gap-3 transition-all shrink-0"
             >
-              View All 27 Services <ArrowRight size={15} />
+              View All 27 Services <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          {/* Service icon grid */}
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
             {featuredServices.map((svc, i) => (
               <motion.div
                 key={svc.slug}
@@ -122,12 +127,12 @@ export default function ServicesSection() {
               >
                 <Link
                   href={`/services/split-ac/${svc.slug}`}
-                  className="group flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/6 border border-white/10 hover:bg-white/12 hover:border-white/25 transition-all text-center"
+                  className="group flex flex-col items-center gap-2.5 p-3.5 rounded-2xl bg-white/6 border border-white/10 hover:bg-white/12 hover:border-white/30 transition-all text-center"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#F5A623]/15 flex items-center justify-center group-hover:bg-[#F5A623]/25 transition-colors">
-                    <svc.icon size={18} className="text-[#F5A623]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#F5A623]/15 flex items-center justify-center group-hover:bg-[#F5A623]/30 transition-colors">
+                    <svc.icon size={17} className="text-[#F5A623]" />
                   </div>
-                  <span className="text-white/80 text-xs font-medium group-hover:text-white transition-colors">
+                  <span className="text-white/75 text-xs font-medium group-hover:text-white transition-colors leading-tight">
                     {svc.label}
                   </span>
                 </Link>

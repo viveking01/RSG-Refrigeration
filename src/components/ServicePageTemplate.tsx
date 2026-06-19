@@ -182,7 +182,7 @@ export default function ServicePageTemplate({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
-              className="flex flex-wrap gap-3"
+              className="cta-buttons-container justify-start"
             >
               <a href={BUSINESS.callUrl} className="btn-secondary" id="service-page-cta-call">
                 <Phone size={17} />
@@ -388,7 +388,7 @@ export default function ServicePageTemplate({
             Need <span className="text-[#F5A623]">{title}</span> Right Now?
           </h2>
           <p className="text-white/60 mb-6">Same-day service, certified technicians, genuine parts.</p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="cta-buttons-container justify-center">
             <a href={BUSINESS.callUrl} className="btn-secondary">
               <Phone size={17} />
               Call: {BUSINESS.phoneDisplay}

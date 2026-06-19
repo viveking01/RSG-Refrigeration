@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle, User, Phone, Wrench, MapPin, MessageSquare } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 const SERVICE_OPTIONS = [
@@ -71,17 +71,17 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="text-center py-12">
-        <div className="w-16 h-16 rounded-full bg-[#22C55E]/10 flex items-center justify-center mx-auto mb-4">
-          <CheckCircle size={32} className="text-[#22C55E]" />
+      <div className="text-center py-12 px-4">
+        <div className="w-20 h-20 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-6 shadow-inner animate-scale-in">
+          <CheckCircle size={40} className="text-[#22C55E]" />
         </div>
-        <h3 className="text-xl font-bold text-[#111827] mb-2">Message Sent!</h3>
-        <p className="text-gray-500 mb-6">
-          Your request has been sent via WhatsApp. We'll respond within 30 minutes.
+        <h3 className="text-2xl font-bold text-[#111827] mb-3">Message Sent Successfully!</h3>
+        <p className="text-gray-500 max-w-sm mx-auto mb-8 text-sm md:text-base">
+          Your request has been successfully generated. We will redirect you to WhatsApp to connect with our dispatch team.
         </p>
         <button
           onClick={() => { setStatus("idle"); setForm({ name: "", phone: "", service: "", area: "", message: "" }); }}
-          className="btn-outline-primary text-sm px-6 py-2.5"
+          className="btn-outline-primary text-sm px-8 py-3"
         >
           Send Another Request
         </button>
@@ -89,115 +89,147 @@ export default function ContactForm() {
     );
   }
 
+  const inputBaseClass = "w-full pl-12 pr-4 py-3.5 bg-slate-50/70 hover:bg-slate-100/50 focus:bg-white text-gray-800 placeholder-gray-400 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-4 focus:ring-[#0B1F66]/8 transition-all shadow-sm focus:shadow-md";
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="grid sm:grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5" htmlFor="contact-name">
+          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-name">
             Your Name *
           </label>
-          <input
-            id="contact-name"
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            required
-            placeholder="Enter your full name"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-2 focus:ring-[#0B1F66]/10 transition-all"
-          />
+          <div className="relative group">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+              <User size={16} />
+            </div>
+            <input
+              id="contact-name"
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              placeholder="Enter your full name"
+              className={inputBaseClass}
+              style={{ paddingLeft: "3rem" }}
+            />
+          </div>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5" htmlFor="contact-phone">
+          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-phone">
             Phone Number *
           </label>
-          <input
-            id="contact-phone"
-            type="tel"
-            name="phone"
-            value={form.phone}
-            onChange={handleChange}
-            required
-            placeholder="+91 98765 43210"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-2 focus:ring-[#0B1F66]/10 transition-all"
-          />
+          <div className="relative group">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+              <Phone size={16} />
+            </div>
+            <input
+              id="contact-phone"
+              type="tel"
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              required
+              placeholder="10-digit mobile number"
+              className={inputBaseClass}
+              style={{ paddingLeft: "3rem" }}
+            />
+          </div>
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5" htmlFor="contact-service">
+          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-service">
             Service Required *
           </label>
-          <select
-            id="contact-service"
-            name="service"
-            value={form.service}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-2 focus:ring-[#0B1F66]/10 transition-all bg-white"
-          >
-            <option value="">Select service...</option>
-            {SERVICE_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </select>
+          <div className="relative group">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+              <Wrench size={16} />
+            </div>
+            <select
+              id="contact-service"
+              name="service"
+              value={form.service}
+              onChange={handleChange}
+              required
+              className={`${inputBaseClass} appearance-none bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M19.5%208.25l-7.5%207.5-7.5-7.5%22%20%2F%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[position:right_16px_center] bg-no-repeat pr-10`}
+              style={{ paddingLeft: "3rem" }}
+            >
+              <option value="">Select service...</option>
+              {SERVICE_OPTIONS.map((opt) => (
+                <option key={opt} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5" htmlFor="contact-area">
+          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-area">
             Your Area *
           </label>
-          <select
-            id="contact-area"
-            name="area"
-            value={form.area}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-2 focus:ring-[#0B1F66]/10 transition-all bg-white"
-          >
-            <option value="">Select area...</option>
-            {AREA_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
-            ))}
-          </select>
+          <div className="relative group">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+              <MapPin size={16} />
+            </div>
+            <select
+              id="contact-area"
+              name="area"
+              value={form.area}
+              onChange={handleChange}
+              required
+              className={`${inputBaseClass} appearance-none bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M19.5%208.25l-7.5%207.5-7.5-7.5%22%20%2F%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[position:right_16px_center] bg-no-repeat pr-10`}
+              style={{ paddingLeft: "3rem" }}
+            >
+              <option value="">Select area...</option>
+              {AREA_OPTIONS.map((opt) => (
+                <option key={opt} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1.5" htmlFor="contact-message">
+        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-message">
           Additional Details
         </label>
-        <textarea
-          id="contact-message"
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          rows={4}
-          placeholder="Describe your AC problem or any additional information..."
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-2 focus:ring-[#0B1F66]/10 transition-all resize-none"
-        />
+        <div className="relative group">
+          <div className="absolute left-4 top-4 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+            <MessageSquare size={16} />
+          </div>
+          <textarea
+            id="contact-message"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            rows={4}
+            placeholder="Describe your AC problem or any additional information..."
+            className={`${inputBaseClass} pl-12 resize-none`}
+            style={{ paddingLeft: "3rem" }}
+          />
+        </div>
       </div>
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#0B1F66] text-white font-bold text-base hover:-translate-y-0.5 transition-all shadow-lg disabled:opacity-60 disabled:translate-y-0"
+        className="w-full flex items-center justify-center gap-2 py-4 rounded-2xl bg-gradient-to-r from-[#0B1F66] to-[#1a3a8f] text-white font-bold text-base hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#0B1F66]/15 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0 cursor-pointer active:translate-y-0 active:scale-[0.99] border-none"
         id="contact-submit-btn"
       >
         {status === "loading" ? (
           <>
             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            Sending...
+            Sending Request...
           </>
         ) : (
           <>
-            <Send size={18} />
+            <Send size={16} />
             Send via WhatsApp
           </>
         )}
       </button>
 
-      <p className="text-center text-gray-400 text-xs">
+      <p className="text-center text-gray-400 text-xs mt-3">
         Your message will be sent directly via WhatsApp for fastest response.
       </p>
     </form>

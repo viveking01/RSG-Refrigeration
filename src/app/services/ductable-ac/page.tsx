@@ -50,7 +50,7 @@ export default function DuctableACPage() {
               From sheet metal duct design and grilles placement to cooling coil diagnostics and AMC contracts.
               We service, install, and repair ductable split and packaged AC systems.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="cta-buttons-container justify-start">
               <a href={BUSINESS.callUrl} className="btn-secondary">
                 <Phone size={17} /> Call Now
               </a>

@@ -45,7 +45,7 @@ export default function ServiceAreasPage() {
             Based in Bandlaguda Jagir, RSG Refrigeration covers 40+ areas across South, West,
             East and North Hyderabad for all AC repair and service needs.
           </p>
-          <div className="flex justify-center gap-3">
+          <div className="cta-buttons-container justify-center">
             <a href={BUSINESS.callUrl} className="btn-secondary"><Phone size={17} /> Call Now</a>
             <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><MessageCircle size={17} /> WhatsApp</a>
           </div>

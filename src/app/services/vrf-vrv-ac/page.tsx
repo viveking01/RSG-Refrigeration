@@ -50,7 +50,7 @@ export default function VRFACPage() {
               Professional engineering solutions for Daikin VRV, Mitsubishi VRF, LG Multi V, and other premium systems.
               We handle layout planning, pipe sizing, installation, diagnostic debugging, and AMC contracts.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="cta-buttons-container justify-start">
               <a href={BUSINESS.callUrl} className="btn-secondary">
                 <Phone size={17} /> Call Now
               </a>

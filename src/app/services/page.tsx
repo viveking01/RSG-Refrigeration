@@ -42,7 +42,7 @@ export default function ServicesPage() {
             From residential split ACs to enterprise VRF systems — RSG Refrigeration handles
             all types of AC services across 40+ areas in Hyderabad.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="cta-buttons-container justify-center">
             <a href={BUSINESS.callUrl} className="btn-secondary">
               <Phone size={17} />
               Call Now
