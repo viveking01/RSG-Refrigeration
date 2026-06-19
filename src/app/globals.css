@@ -12,8 +12,8 @@
   --color-accent-dark: #16a34a;
   --color-background: #ffffff;
   --color-text: #111827;
-  --color-text-muted: #6b7280;
-  --color-border: #e5e7eb;
+  --color-text-muted: #374151;
+  --color-border: #d1d5db;
   --color-surface: #f9fafb;
   --color-surface-2: #f3f4f6;
 
@@ -35,6 +35,11 @@
   --shadow-secondary: 0 8px 32px -4px rgb(245 166 35 / 0.35);
   --shadow-accent: 0 8px 32px -4px rgb(34 197 94 / 0.35);
   --shadow-glow: 0 0 40px rgb(11 31 102 / 0.2);
+
+  /* High contrast gray colors to resolve faded / washed-out text */
+  --color-gray-500: #374151;
+  --color-gray-400: #4b5563;
+  --color-gray-300: #6b7280;
 }
 
 * {
@@ -208,6 +213,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 24px -4px rgb(0 0 0 / 0.08), 0 1px 4px rgb(0 0 0 / 0.04);
   border: 1px solid rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .card-premium {
+    padding: 32px;
+  }
 }
 .card-premium:hover {
   transform: translateY(-4px);
@@ -487,36 +498,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Floating buttons */
-.floating-btn {
-  position: fixed;
-  z-index: 50;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 20px -4px rgb(0 0 0 / 0.3);
-  transition: all 0.3s ease;
-  border: none;
-  text-decoration: none;
+@media (max-width: 767px) {
+  .floating-btn {
+    display: none !important;
+  }
 }
-.floating-btn:hover {
-  transform: scale(1.1);
+@media (min-width: 768px) {
+  .floating-btn {
+    position: fixed;
+    z-index: 50;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px -4px rgb(0 0 0 / 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+  }
+  .floating-btn:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* Mobile CTA Bar */
-.mobile-cta-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 49;
-  display: flex;
-  background: var(--color-primary-dark);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: env(safe-area-inset-bottom);
+@media (max-width: 767px) {
+  .mobile-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 49;
+    display: flex;
+    background: var(--color-primary-dark);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+@media (min-width: 768px) {
+  .mobile-cta-bar {
+    display: none !important;
+  }
 }
 
 /* Trust badge */
@@ -564,3 +589,51 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(12px);
 }
+
+/* Improve contrast of white transparent text on dark backgrounds */
+.text-white\/50, .text-white\/60, .text-white\/70, .text-white\/75 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Ensure placeholder text inside inputs is dark and fully visible */
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: #4b5563 !important;
+  opacity: 1 !important;
+}
+
+/* Ensure outline buttons have crisp, visible borders and text */
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.btn-outline-primary {
+  border-color: rgba(11, 31, 102, 0.6) !important;
+  color: var(--color-primary) !important;
+  background: rgba(11, 31, 102, 0.05) !important;
+}
+
+/* Enforce centering, height, and padding for Why Choose cards to prevent bleeding */
+.card-why-choose {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: flex-start !important;
+  padding: 24px 20px !important;
+  height: 100% !important;
+}
+@media (min-width: 768px) {
+  .card-why-choose {
+    padding: 36px 28px !important;
+  }
+}
+
+/* Enforce height and padding for Service Category cards */
+.card-service-item {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  padding: 24px !important;
+}
+

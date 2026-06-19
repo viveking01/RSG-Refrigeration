@@ -99,7 +99,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
               {navLinks.map((link) =>
                 link.hasDropdown ? (
                   <div
@@ -109,7 +109,7 @@ export default function Header() {
                     onMouseLeave={() => setServicesOpen(false)}
                   >
                     <button
-                      className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                      className={`flex items-center gap-1.5 px-3 xl:px-4 py-2.5 rounded-lg text-xs lg:text-sm font-medium transition-all ${
                         pathname.startsWith("/services")
                           ? "text-[#0B1F66] bg-blue-50"
                           : "text-gray-700 hover:text-[#0B1F66] hover:bg-gray-50"
@@ -117,7 +117,7 @@ export default function Header() {
                     >
                       {link.label}
                       <ChevronDown
-                        size={14}
+                        size={13}
                         className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
                       />
                     </button>
@@ -160,7 +160,7 @@ export default function Header() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    className={`px-3 xl:px-4 py-2.5 rounded-lg text-xs lg:text-sm font-medium transition-all ${
                       pathname === link.href
                         ? "text-[#0B1F66] bg-blue-50"
                         : "text-gray-700 hover:text-[#0B1F66] hover:bg-gray-50"
@@ -173,19 +173,19 @@ export default function Header() {
             </nav>
 
             {/* CTA */}
-            <div className="hidden lg:flex items-center gap-2 shrink-0">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3.5 shrink-0">
               <a
                 href={BUSINESS.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-semibold hover:bg-[#22c55e] transition-all hover:-translate-y-0.5 shadow-md whitespace-nowrap"
+                className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-full bg-[#25D366] text-white text-[12px] lg:text-sm font-bold hover:bg-[#22c55e] transition-all hover:-translate-y-0.5 shadow-md whitespace-nowrap"
               >
                 <MessageCircle size={15} />
                 WhatsApp
               </a>
               <a
                 href={BUSINESS.callUrl}
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#0B1F66] text-white text-sm font-semibold hover:bg-[#1a3a8f] transition-all hover:-translate-y-0.5 shadow-md whitespace-nowrap"
+                className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-full bg-[#0B1F66] text-white text-[12px] lg:text-sm font-bold hover:bg-[#1a3a8f] transition-all hover:-translate-y-0.5 shadow-md whitespace-nowrap"
               >
                 <Phone size={15} />
                 Call Now

@@ -92,100 +92,98 @@ export default function ContactForm() {
   const inputBaseClass = "w-full pl-12 pr-4 py-3.5 bg-slate-50/70 hover:bg-slate-100/50 focus:bg-white text-gray-800 placeholder-gray-400 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-4 focus:ring-[#0B1F66]/8 transition-all shadow-sm focus:shadow-md";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-name">
-            Your Name *
-          </label>
-          <div className="relative group">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
-              <User size={16} />
-            </div>
-            <input
-              id="contact-name"
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              placeholder="Enter your full name"
-              className={inputBaseClass}
-              style={{ paddingLeft: "3rem" }}
-            />
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div>
+        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-name">
+          Your Name *
+        </label>
+        <div className="relative group">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+            <User size={16} />
           </div>
-        </div>
-        <div>
-          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-phone">
-            Phone Number *
-          </label>
-          <div className="relative group">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
-              <Phone size={16} />
-            </div>
-            <input
-              id="contact-phone"
-              type="tel"
-              name="phone"
-              value={form.phone}
-              onChange={handleChange}
-              required
-              placeholder="10-digit mobile number"
-              className={inputBaseClass}
-              style={{ paddingLeft: "3rem" }}
-            />
-          </div>
+          <input
+            id="contact-name"
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            required
+            placeholder="Enter your full name"
+            className={inputBaseClass}
+            style={{ paddingLeft: "3rem" }}
+          />
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-service">
-            Service Required *
-          </label>
-          <div className="relative group">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
-              <Wrench size={16} />
-            </div>
-            <select
-              id="contact-service"
-              name="service"
-              value={form.service}
-              onChange={handleChange}
-              required
-              className={`${inputBaseClass} appearance-none bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M19.5%208.25l-7.5%207.5-7.5-7.5%22%20%2F%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[position:right_16px_center] bg-no-repeat pr-10`}
-              style={{ paddingLeft: "3rem" }}
-            >
-              <option value="">Select service...</option>
-              {SERVICE_OPTIONS.map((opt) => (
-                <option key={opt} value={opt}>{opt}</option>
-              ))}
-            </select>
+      <div>
+        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-phone">
+          Phone Number *
+        </label>
+        <div className="relative group">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+            <Phone size={16} />
           </div>
+          <input
+            id="contact-phone"
+            type="tel"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+            required
+            placeholder="10-digit mobile number"
+            className={inputBaseClass}
+            style={{ paddingLeft: "3rem" }}
+          />
         </div>
-        <div>
-          <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-area">
-            Your Area *
-          </label>
-          <div className="relative group">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
-              <MapPin size={16} />
-            </div>
-            <select
-              id="contact-area"
-              name="area"
-              value={form.area}
-              onChange={handleChange}
-              required
-              className={`${inputBaseClass} appearance-none bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M19.5%208.25l-7.5%207.5-7.5-7.5%22%20%2F%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[position:right_16px_center] bg-no-repeat pr-10`}
-              style={{ paddingLeft: "3rem" }}
-            >
-              <option value="">Select area...</option>
-              {AREA_OPTIONS.map((opt) => (
-                <option key={opt} value={opt}>{opt}</option>
-              ))}
-            </select>
+      </div>
+
+      <div>
+        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-service">
+          Service Required *
+        </label>
+        <div className="relative group">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+            <Wrench size={16} />
           </div>
+          <select
+            id="contact-service"
+            name="service"
+            value={form.service}
+            onChange={handleChange}
+            required
+            className={`${inputBaseClass} appearance-none bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M19.5%208.25l-7.5%207.5-7.5-7.5%22%20%2F%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[position:right_16px_center] bg-no-repeat pr-10`}
+            style={{ paddingLeft: "3rem" }}
+          >
+            <option value="">Select service...</option>
+            {SERVICE_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" htmlFor="contact-area">
+          Your Area *
+        </label>
+        <div className="relative group">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within:text-[#0B1F66] transition-colors">
+            <MapPin size={16} />
+          </div>
+          <select
+            id="contact-area"
+            name="area"
+            value={form.area}
+            onChange={handleChange}
+            required
+            className={`${inputBaseClass} appearance-none bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M19.5%208.25l-7.5%207.5-7.5-7.5%22%20%2F%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[position:right_16px_center] bg-no-repeat pr-10`}
+            style={{ paddingLeft: "3rem" }}
+          >
+            <option value="">Select area...</option>
+            {AREA_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
         </div>
       </div>
 

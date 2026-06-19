@@ -21,7 +21,7 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Hero */}
-      <section className="bg-hero pt-24 pb-14 md:pt-32 md:pb-20 relative overflow-hidden">
+      <section className="bg-hero pt-24 pb-20 md:pt-32 md:pb-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern" />
         <div className="container-custom relative z-10 text-center">
           <div className="badge text-white/70 border border-white/20 bg-white/8 mx-auto mb-5">Get in Touch</div>
@@ -78,18 +78,18 @@ export default function ContactPage() {
                       color: "text-[#22C55E]",
                     },
                   ].map((item) => (
-                    <div key={item.label} className="flex items-start gap-4 p-4 rounded-2xl bg-[#f8faff] border border-gray-100">
+                    <div key={item.label} className="flex items-start gap-4 p-5 rounded-2xl bg-[#f8faff] border border-gray-100 shadow-xs">
                       <div className="w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center shrink-0 shadow-sm">
                         <item.icon size={18} className={item.color} />
                       </div>
-                      <div>
+                      <div className="flex-1 min-w-0">
                         <div className="text-xs text-gray-400 mb-0.5">{item.label}</div>
                         {item.href ? (
-                          <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm font-medium text-gray-800 hover:text-[#0B1F66] transition-colors">
+                          <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm font-medium text-gray-800 hover:text-[#0B1F66] transition-colors break-words">
                             {item.value}
                           </a>
                         ) : (
-                          <div className="text-sm font-medium text-gray-800">{item.value}</div>
+                          <div className="text-sm font-medium text-gray-800 break-words leading-relaxed">{item.value}</div>
                         )}
                       </div>
                     </div>
@@ -98,14 +98,26 @@ export default function ContactPage() {
               </div>
 
               {/* Quick CTAs */}
-              <div className="space-y-3">
-                <a href={BUSINESS.callUrl} className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-[#0B1F66] text-white font-bold hover:-translate-y-0.5 transition-all shadow-lg">
-                  <Phone size={19} />
-                  Call Now: {BUSINESS.phoneDisplay}
+              <div className="space-y-3 pt-2">
+                <a
+                  href={BUSINESS.callUrl}
+                  className="btn-primary w-full py-4 justify-center text-sm md:text-base rounded-2xl"
+                  style={{ display: "flex" }}
+                  id="contact-quick-call"
+                >
+                  <Phone size={18} />
+                  Call Now
                 </a>
-                <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-[#25D366] text-white font-bold hover:-translate-y-0.5 transition-all shadow-lg">
-                  <MessageCircle size={19} />
-                  WhatsApp for Quick Response
+                <a
+                  href={BUSINESS.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp w-full py-4 justify-center text-sm md:text-base rounded-2xl"
+                  style={{ display: "flex" }}
+                  id="contact-quick-whatsapp"
+                >
+                  <MessageCircle size={18} />
+                  WhatsApp Us
                 </a>
               </div>
 

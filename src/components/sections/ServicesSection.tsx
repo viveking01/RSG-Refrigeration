@@ -69,7 +69,7 @@ export default function ServicesSection() {
               >
                 <Link
                   href={`/services/${cat.slug}`}
-                  className="card-service group flex flex-col p-6 h-full"
+                  className="card-service card-service-item group"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-[#0B1F66]/8 flex items-center justify-center mb-4 group-hover:bg-[#0B1F66] transition-colors duration-300 shrink-0">
                     <Icon size={22} className="text-[#0B1F66] group-hover:text-white transition-colors duration-300" />
