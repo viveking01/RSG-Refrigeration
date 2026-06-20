@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Phone, MessageCircle, MapPin, Mail, Clock, Send, CheckCircle } from "lucide-react";
 import ContactForm from "./ContactForm";
 
@@ -101,7 +102,7 @@ export default function ContactPage() {
               <div className="space-y-3 pt-2">
                 <a
                   href={BUSINESS.callUrl}
-                  className="btn-primary w-full py-4 justify-center text-sm md:text-base rounded-2xl"
+                  className="btn-primary w-full py-4 justify-center text-sm md:text-base rounded-full"
                   style={{ display: "flex" }}
                   id="contact-quick-call"
                 >
@@ -112,11 +113,11 @@ export default function ContactPage() {
                   href={BUSINESS.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp w-full py-4 justify-center text-sm md:text-base rounded-2xl"
+                  className="btn-whatsapp w-full py-4 justify-center text-sm md:text-base rounded-full"
                   style={{ display: "flex" }}
                   id="contact-quick-whatsapp"
                 >
-                  <MessageCircle size={18} />
+                  <WhatsAppIcon size={18} />
                   WhatsApp Us
                 </a>
               </div>

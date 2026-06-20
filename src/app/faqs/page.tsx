@@ -4,6 +4,7 @@ import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { HOME_FAQS } from "@/lib/data/faqs";
 import FAQSection from "@/components/sections/FAQSection";
 import { BUSINESS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Phone, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -50,7 +51,7 @@ export default function FAQsPage() {
           <p className="text-white/60 mb-6">Call or WhatsApp us directly — we're happy to help!</p>
           <div className="cta-buttons-container justify-center">
             <a href={BUSINESS.callUrl} className="btn-secondary"><Phone size={17} /> Call Now</a>
-            <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><MessageCircle size={17} /> WhatsApp</a>
+            <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><WhatsAppIcon size={17} /> WhatsApp</a>
           </div>
         </div>
       </section>

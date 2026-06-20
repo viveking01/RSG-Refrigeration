@@ -6,6 +6,7 @@ import { BLOG_POSTS, BlogPost } from "@/lib/data/blog-posts";
 import { BUSINESS } from "@/lib/constants";
 import Link from "next/link";
 import { ArrowRight, Clock, Tag, Calendar, User, Phone, MessageCircle, ChevronLeft } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -463,7 +464,7 @@ export default async function BlogPostPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#22c55e] transition-all"
                   >
-                    <MessageCircle size={16} /> WhatsApp Us
+                    <WhatsAppIcon size={16} /> WhatsApp Us
                   </a>
                 </div>
               </div>
@@ -499,7 +500,7 @@ export default async function BlogPostPage({ params }: Props) {
               <Phone size={17} /> Call: {BUSINESS.phoneDisplay}
             </a>
             <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-              <MessageCircle size={17} /> WhatsApp Now
+              <WhatsAppIcon size={17} /> WhatsApp Now
             </a>
           </div>
         </div>

@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, MessageCircle, CalendarCheck } from "lucide-react";
+import { Phone, CalendarCheck } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { motion } from "framer-motion";
 
 export default function MobileCTABar() {
@@ -40,7 +41,7 @@ export default function MobileCTABar() {
         className="flex-1 flex flex-col items-center justify-center gap-1 py-3 text-white/80 hover:text-white hover:bg-white/5 transition-all active:bg-white/10"
         id="mobile-cta-whatsapp"
       >
-        <MessageCircle size={18} />
+        <WhatsAppIcon size={18} className="shrink-0" />
         <span className="text-[10px] font-semibold">WhatsApp</span>
       </a>
     </motion.div>

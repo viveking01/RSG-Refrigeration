@@ -3,6 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 import { Phone, MessageCircle, Award, Users, Clock, ShieldCheck, CalendarCheck } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -158,7 +159,7 @@ export default function AboutPage() {
             <p className="text-white/60 mb-6">Join 5,000+ satisfied customers across Hyderabad.</p>
             <div className="cta-buttons-container justify-center">
               <a href={BUSINESS.callUrl} className="btn-secondary"><Phone size={17} /> Call Now</a>
-              <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><MessageCircle size={17} /> WhatsApp</a>
+              <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><WhatsAppIcon size={17} /> WhatsApp</a>
               <Link href="/contact" className="btn-outline"><CalendarCheck size={17} /> Book Service</Link>
             </div>
           </div>

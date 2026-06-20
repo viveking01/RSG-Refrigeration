@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AC_CATEGORIES, SPLIT_AC_SERVICES } from "@/lib/data/services";
 import { AirVent, Wind, LayoutGrid, Network, ArrowRight, CheckCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Phone, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -48,7 +49,7 @@ export default function ServicesPage() {
               Call Now
             </a>
             <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-              <MessageCircle size={17} />
+              <WhatsAppIcon size={17} />
               WhatsApp
             </a>
           </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MapPin, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { LOCATION_DATA } from "@/lib/data/locations";
 import { BUSINESS, ALL_AREAS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "AC Service Areas in Hyderabad — 40+ Locations Covered",
@@ -47,7 +48,7 @@ export default function ServiceAreasPage() {
           </p>
           <div className="cta-buttons-container justify-center">
             <a href={BUSINESS.callUrl} className="btn-secondary"><Phone size={17} /> Call Now</a>
-            <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><MessageCircle size={17} /> WhatsApp</a>
+            <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><WhatsAppIcon size={17} /> WhatsApp</a>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -106,14 +107,14 @@ export default function ServiceAreasPage() {
                         <Link
                           key={area}
                           href={`/service-areas/${slug}`}
-                          className={`text-xs px-3 py-1.5 rounded-full bg-white/80 border ${config.border} ${config.color} font-medium hover:bg-white transition-colors`}
+                          className={`inline-block text-xs px-3 py-1.5 rounded-full bg-white/80 border ${config.border} ${config.color} font-medium hover:bg-white transition-colors`}
                         >
                           {area}
                         </Link>
                       ) : (
                         <span
                           key={area}
-                          className={`text-xs px-3 py-1.5 rounded-full bg-white/50 border ${config.border} text-gray-500`}
+                          className={`inline-block text-xs px-3 py-1.5 rounded-full bg-white/50 border ${config.border} text-gray-500`}
                         >
                           {area}
                         </span>

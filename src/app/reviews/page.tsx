@@ -4,6 +4,7 @@ import { reviewSchema, breadcrumbSchema } from "@/lib/schema";
 import { REVIEWS, AGGREGATE_RATING } from "@/lib/data/reviews";
 import { Star, Quote, ThumbsUp, Phone, MessageCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import Link from "next/link";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -96,7 +97,7 @@ export default function ReviewsPage() {
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">"{review.text}"</p>
                 <div className="flex items-center justify-between pt-3 border-t border-gray-50">
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-[#0B1F66]/6 text-[#0B1F66] font-medium">
+                  <span className="inline-block text-xs px-2.5 py-1 rounded-full bg-[#0B1F66]/6 text-[#0B1F66] font-medium">
                     {review.service}
                   </span>
                   <span className="text-xs text-gray-400">
@@ -113,7 +114,7 @@ export default function ReviewsPage() {
             <p className="text-white/60 mb-6">Experience Hyderabad's most trusted AC service.</p>
             <div className="cta-buttons-container justify-center">
               <a href={BUSINESS.callUrl} className="btn-secondary"><Phone size={17} /> Call Now</a>
-              <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><MessageCircle size={17} /> WhatsApp</a>
+              <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><WhatsAppIcon size={17} /> WhatsApp</a>
             </div>
           </div>
         </div>

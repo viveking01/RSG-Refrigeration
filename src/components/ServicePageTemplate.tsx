@@ -8,6 +8,7 @@ import {
   ChevronRight, Star,
 } from "lucide-react";
 import { BUSINESS, BRANDS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { FAQ } from "@/lib/data/faqs";
 import FAQSection from "@/components/sections/FAQSection";
 import { useState } from "react";
@@ -189,7 +190,7 @@ export default function ServicePageTemplate({
                 Call Now
               </a>
               <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" id="service-page-cta-whatsapp">
-                <MessageCircle size={17} />
+                <WhatsAppIcon size={17} />
                 WhatsApp
               </a>
               <Link href="/contact" className="btn-outline" id="service-page-cta-book">
@@ -280,7 +281,7 @@ export default function ServicePageTemplate({
                 <h2 className="text-2xl font-bold text-[#111827] mb-5">Brands We Service</h2>
                 <div className="flex flex-wrap gap-2">
                   {BRANDS.map((brand) => (
-                    <span key={brand} className="px-4 py-2 rounded-full border border-[#0B1F66]/15 text-[#0B1F66] text-sm font-medium hover:bg-[#0B1F66] hover:text-white transition-all cursor-default">
+                    <span key={brand} className="inline-block px-4 py-2 rounded-full border border-[#0B1F66]/15 text-[#0B1F66] text-sm font-medium hover:bg-[#0B1F66] hover:text-white transition-all cursor-default">
                       {brand}
                     </span>
                   ))}
@@ -332,16 +333,16 @@ export default function ServicePageTemplate({
                     </div>
                   )}
 
-                  <div className="space-y-3">
-                    <a href={BUSINESS.callUrl} className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#F5A623] text-[#07132e] font-bold transition-all hover:-translate-y-0.5">
+                   <div className="space-y-3">
+                    <a href={BUSINESS.callUrl} className="btn-secondary w-full py-3.5 justify-center">
                       <Phone size={17} />
                       Call: {BUSINESS.phoneDisplay}
                     </a>
-                    <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#25D366] text-white font-semibold transition-all hover:-translate-y-0.5">
-                      <MessageCircle size={17} />
+                    <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp w-full py-3.5 justify-center">
+                      <WhatsAppIcon size={17} />
                       WhatsApp Now
                     </a>
-                    <Link href="/contact" className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-white/8 border border-white/20 text-white font-semibold transition-all hover:bg-white/15">
+                    <Link href="/contact" className="btn-outline w-full py-3.5 justify-center">
                       Book Online
                     </Link>
                   </div>
@@ -394,7 +395,7 @@ export default function ServicePageTemplate({
               Call: {BUSINESS.phoneDisplay}
             </a>
             <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-              <MessageCircle size={17} />
+              <WhatsAppIcon size={17} />
               WhatsApp Now
             </a>
           </div>

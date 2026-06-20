@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send, CheckCircle, AlertCircle, User, Phone, Wrench, MapPin, MessageSquare } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const SERVICE_OPTIONS = [
   "Split AC Repair",
@@ -89,7 +90,7 @@ export default function ContactForm() {
     );
   }
 
-  const inputBaseClass = "w-full pl-12 pr-4 py-3.5 bg-slate-50/70 hover:bg-slate-100/50 focus:bg-white text-gray-800 placeholder-gray-400 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-4 focus:ring-[#0B1F66]/8 transition-all shadow-sm focus:shadow-md";
+  const inputBaseClass = "w-full pl-12 pr-4 py-3.5 bg-slate-50/70 hover:bg-slate-100/50 focus:bg-white text-gray-800 placeholder-gray-400 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-[#0B1F66] focus:ring-4 focus:ring-[#0B1F66]/8 transition-all shadow-sm focus:shadow-md";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -211,7 +212,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full flex items-center justify-center gap-2 py-4 rounded-2xl bg-gradient-to-r from-[#0B1F66] to-[#1a3a8f] text-white font-bold text-base hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#0B1F66]/15 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0 cursor-pointer active:translate-y-0 active:scale-[0.99] border-none"
+        className="w-full flex items-center justify-center gap-2 py-4 rounded-full bg-gradient-to-r from-[#0B1F66] to-[#1a3a8f] text-white font-bold text-base hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#0B1F66]/15 transition-all duration-300 disabled:opacity-60 disabled:translate-y-0 cursor-pointer active:translate-y-0 active:scale-[0.99] border-none"
         id="contact-submit-btn"
       >
         {status === "loading" ? (
@@ -221,7 +222,7 @@ export default function ContactForm() {
           </>
         ) : (
           <>
-            <Send size={16} />
+            <WhatsAppIcon size={16} />
             Send via WhatsApp
           </>
         )}

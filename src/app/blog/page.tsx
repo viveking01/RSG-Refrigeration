@@ -61,7 +61,7 @@ export default function BlogPage() {
                 <div className="h-2 bg-gradient-to-r from-[#0B1F66] to-[#1a3a8f]" />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${categoryColors[post.category] || "bg-gray-50 text-gray-600 border-gray-100"}`}>
+                    <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full border ${categoryColors[post.category] || "bg-gray-50 text-gray-600 border-gray-100"}`}>
                       <Tag size={10} className="inline mr-1" />
                       {post.category}
                     </span>

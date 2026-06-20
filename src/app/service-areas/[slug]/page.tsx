@@ -6,6 +6,7 @@ import { LOCATION_DATA, getLocationBySlug, ALL_LOCATION_SLUGS } from "@/lib/data
 import { BUSINESS } from "@/lib/constants";
 import Link from "next/link";
 import { MapPin, Phone, MessageCircle, CheckCircle, ArrowRight, Clock, Star, ChevronRight } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { POPULAR_SERVICES, AC_CATEGORIES } from "@/lib/data/services";
 import { HOME_FAQS } from "@/lib/data/faqs";
 
@@ -121,7 +122,7 @@ export default async function LocationPage({ params }: Props) {
                 <Phone size={17} /> Call Now
               </a>
               <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-                <MessageCircle size={17} /> WhatsApp
+                <WhatsAppIcon size={17} /> WhatsApp
               </a>
               <Link href="/contact" className="btn-outline">Book Service</Link>
             </div>
@@ -209,12 +210,12 @@ export default async function LocationPage({ params }: Props) {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {location.landmarks.map((area) => (
-                      <span key={area} className="px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#0B1F66] text-sm font-medium">
+                      <span key={area} className="inline-block px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-[#0B1F66] text-sm font-medium">
                         <MapPin size={11} className="inline mr-1" />{area}
                       </span>
                     ))}
                     {location.nearbyAreas?.map((area) => (
-                      <span key={area} className="px-3 py-1.5 rounded-full bg-gray-50 border border-gray-100 text-gray-600 text-sm">
+                      <span key={area} className="inline-block px-3 py-1.5 rounded-full bg-gray-50 border border-gray-100 text-gray-600 text-sm">
                         {area}
                       </span>
                     ))}
@@ -278,7 +279,7 @@ export default async function LocationPage({ params }: Props) {
                       <Phone size={17} /> Call: {BUSINESS.phoneDisplay}
                     </a>
                     <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#25D366] text-white font-semibold">
-                      <MessageCircle size={17} /> WhatsApp Us
+                      <WhatsAppIcon size={17} /> WhatsApp Us
                     </a>
                     <Link href="/contact" className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-white/8 border border-white/20 text-white font-semibold">
                       Book Online
@@ -294,7 +295,7 @@ export default async function LocationPage({ params }: Props) {
                         <Link
                           key={area}
                           href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`}
-                          className="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-[#0B1F66] hover:bg-[#0B1F66] hover:text-white transition-colors"
+                          className="inline-block text-xs px-2.5 py-1 rounded-full bg-blue-50 text-[#0B1F66] hover:bg-[#0B1F66] hover:text-white transition-colors"
                         >
                           {area}
                         </Link>
@@ -333,7 +334,7 @@ export default async function LocationPage({ params }: Props) {
               <Phone size={17} /> Call: {BUSINESS.phoneDisplay}
             </a>
             <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-              <MessageCircle size={17} /> WhatsApp Now
+              <WhatsAppIcon size={17} /> WhatsApp Now
             </a>
           </div>
         </div>

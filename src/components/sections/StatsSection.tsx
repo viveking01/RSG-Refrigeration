@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { useInView } from "framer-motion";
 
 const stats = [
   { value: 5000, suffix: "+", label: "Happy Customers", color: "text-[#F5A623]" },
@@ -41,43 +41,38 @@ function Counter({ value, suffix, isDecimal }: { value: number; suffix: string; 
 
 export default function StatsSection() {
   return (
-    <section className="py-14 bg-gradient-to-br from-[#0B1F66] to-[#1a3a8f] relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 opacity-5"
+    <section className="py-14 bg-hero relative overflow-hidden">
+      {/* Grid pattern overlay matching hero */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-          backgroundSize: "40px 40px",
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
         }}
       />
+      {/* Ambient glow blobs */}
+      <div className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-[#F5A623] opacity-5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-blue-400 opacity-5 blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-10"
-        >
+        <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-white">
             RSG Refrigeration by the Numbers
           </h2>
-          <p className="text-white/50 mt-2">Hyderabad's trusted AC service partner</p>
-        </motion.div>
+          <p className="text-white/60 mt-2">Hyderabad&apos;s trusted AC service partner</p>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {stats.map((stat, index) => (
-            <motion.div
+          {stats.map((stat) => (
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center p-5 rounded-2xl bg-white/6 border border-white/10 hover:bg-white/10 transition-colors"
+              className="text-center p-5 rounded-2xl bg-white/6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
             >
               <div className={`text-3xl font-bold mb-1 ${stat.color}`}>
                 <Counter value={stat.value} suffix={stat.suffix} isDecimal={stat.isDecimal} />
               </div>
-              <div className="text-white/60 text-xs font-medium">{stat.label}</div>
-            </motion.div>
+              <div className="text-white/70 text-xs font-semibold uppercase tracking-wider">{stat.label}</div>
+            </div>
           ))}
         </div>
       </div>

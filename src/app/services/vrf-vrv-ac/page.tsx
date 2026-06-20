@@ -5,6 +5,7 @@ import Link from "next/link";
 import { VRF_AC_SERVICES } from "@/lib/data/services";
 import { ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "VRF / VRV System Services in Hyderabad — Multi-Zone AC Repair & Installation",
@@ -55,7 +56,7 @@ export default function VRFACPage() {
                 <Phone size={17} /> Call Now
               </a>
               <a href={BUSINESS.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-                <MessageCircle size={17} /> WhatsApp
+                <WhatsAppIcon size={17} /> WhatsApp
               </a>
             </div>
           </div>
@@ -93,7 +94,7 @@ export default function VRFACPage() {
                 <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-2">{svc.description}</p>
                 <div className="flex items-center justify-between">
                   {svc.priceRange && (
-                    <span className="text-xs font-semibold text-[#22C55E] bg-green-50 px-2.5 py-1 rounded-full">
+                    <span className="inline-block text-xs font-semibold text-[#22C55E] bg-green-50 px-2.5 py-1 rounded-full">
                       {svc.priceRange}
                     </span>
                   )}
