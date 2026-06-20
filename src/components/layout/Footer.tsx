@@ -214,7 +214,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-white/70 transition-colors"
             >
-              Design &amp; Developed By <span className="text-[#F5A623]/70 font-semibold">Zoom Digital</span>
+              Design And Developed By - <span className="text-[#F5A623] font-semibold">Zoom Digital</span>
             </a>
           </div>
         </div>
