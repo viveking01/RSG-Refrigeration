@@ -65,7 +65,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="cta-buttons-container justify-start mb-10">
               <a href={BUSINESS.callUrl} className="btn-secondary" id="hero-cta-call">
                 <Phone size={18} />
                 Call Now

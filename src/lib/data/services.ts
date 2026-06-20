@@ -458,7 +458,7 @@ export const AC_CATEGORIES = [
     description: "Complete split AC installation, repair, service, and maintenance solutions.",
     icon: "AirVent",
     count: 27,
-    image: "/images/split-ac.jpg",
+    image: "/images/split-ac.png",
   },
   {
     slug: "cassette-ac",
@@ -466,7 +466,7 @@ export const AC_CATEGORIES = [
     description: "Expert cassette AC services for homes, offices, and commercial spaces.",
     icon: "LayoutGrid",
     count: 20,
-    image: "/images/cassette-ac.jpg",
+    image: "/images/cassette-ac.png",
   },
   {
     slug: "ductable-ac",
@@ -474,7 +474,7 @@ export const AC_CATEGORIES = [
     description: "Ductable AC system installation, maintenance, and repair specialists.",
     icon: "Wind",
     count: 15,
-    image: "/images/ductable-ac.jpg",
+    image: "/images/ductable-ac.png",
   },
   {
     slug: "vrf-vrv-ac",
@@ -482,7 +482,7 @@ export const AC_CATEGORIES = [
     description: "Advanced VRF and VRV multi-zone AC system services for large buildings.",
     icon: "Network",
     count: 15,
-    image: "/images/vrf-ac.jpg",
+    image: "/images/vrf-ac.png",
   },
 ];
 

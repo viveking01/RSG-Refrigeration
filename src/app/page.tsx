@@ -11,6 +11,7 @@ import PopularServicesSection from "@/components/sections/PopularServicesSection
 import BrandsSection from "@/components/sections/BrandsSection";
 import ServiceAreasSection from "@/components/sections/ServiceAreasSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
+import BlogCarouselSection from "@/components/sections/BlogCarouselSection";
 import FAQSection from "@/components/sections/FAQSection";
 import EmergencyCTASection from "@/components/sections/EmergencyCTASection";
 import StatsSection from "@/components/sections/StatsSection";
@@ -60,6 +61,7 @@ export default function HomePage() {
       <BrandsSection />
       <ServiceAreasSection />
       <ReviewsSection />
+      <BlogCarouselSection />
       <FAQSection />
       <EmergencyCTASection />
     </>

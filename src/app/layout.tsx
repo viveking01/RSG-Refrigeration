@@ -7,6 +7,7 @@ import { BUSINESS } from "@/lib/constants";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileCTABar from "@/components/layout/MobileCTABar";
+import CTAPopup from "@/components/layout/CTAPopup";
 import { WhatsAppButton, CallButton } from "@/components/layout/FloatingButtons";
 
 const inter = Inter({
@@ -55,11 +56,12 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 pb-16 md:pb-0">
+        <main className="flex-1 pb-28 md:pb-0">
           {children}
         </main>
         <Footer />
         <MobileCTABar />
+        <CTAPopup />
         <WhatsAppButton />
         <CallButton />
       </body>
