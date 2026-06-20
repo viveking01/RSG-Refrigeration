@@ -44,6 +44,25 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* App-like user active tap styling */
+a, button, select, input, [role="button"] {
+  outline: none;
+}
+
+/* Tap scale feedback for links & buttons on mobile */
+@media (max-width: 767px) {
+  a:active, button:active, .mobile-tap-active:active {
+    transform: scale(0.97) !important;
+    transition: transform 0.08s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  }
+  
+  .mobile-no-select {
+    user-select: none;
+    -webkit-user-select: none;
+  }
 }
 
 html {
