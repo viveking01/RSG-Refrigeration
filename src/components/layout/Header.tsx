@@ -70,7 +70,7 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-2 text-white/60">
             <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse inline-block" />
-            <span>Open Today: 8:00 AM – 8:00 PM</span>
+            <span>Open: Mon–Sat 9AM–10PM | Sun 9AM–8PM</span>
           </div>
         </div>
       </div>

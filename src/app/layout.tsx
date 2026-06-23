@@ -9,6 +9,7 @@ import Footer from "@/components/layout/Footer";
 import MobileCTABar from "@/components/layout/MobileCTABar";
 import CTAPopup from "@/components/layout/CTAPopup";
 import { WhatsAppButton, CallButton } from "@/components/layout/FloatingButtons";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className={`${inter.variable} ${plusJakartaSans.variable}`}>
       <head>
+        <meta name="google-site-verification" content="AWy_9cmDCkGiJ2BPe2YX6QJu5m3Wd03dgShsIZv6bfA" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -55,6 +57,19 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RE8NBNY3E4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RE8NBNY3E4');
+          `}
+        </Script>
         <Header />
         <main className="flex-1 pb-28 md:pb-0">
           {children}

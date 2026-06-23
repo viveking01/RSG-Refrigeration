@@ -24,7 +24,7 @@ export const BUSINESS = {
   googleMapsUrl: "https://maps.google.com/?q=Bandlaguda+Jagir+Hyderabad+Telangana",
   whatsappUrl: "https://wa.me/917815901302",
   callUrl: "tel:7815901302",
-  workingHours: "Mon–Sun: 8:00 AM – 8:00 PM",
+  workingHours: "Mon–Sat: 9:00 AM – 10:00 PM | Sun: 9:00 AM – 8:00 PM",
   established: "2018",
   experience: "7+",
   customersServed: "5000+",
@@ -32,8 +32,8 @@ export const BUSINESS = {
   avgRating: 4.9,
   reviewCount: 320,
   socialMedia: {
-    facebook: "https://facebook.com/rsgrefrigeration",
-    instagram: "https://instagram.com/rsgrefrigeration",
+    facebook: "https://www.facebook.com/share/1NybHKAa3P/",
+    instagram: "https://www.instagram.com/rakibraza61?igsh=NnZqNDlzYnRxY2c1",
     twitter: "https://twitter.com/rsgrefrigeration",
   },
 } as const;

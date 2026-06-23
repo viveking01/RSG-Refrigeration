@@ -107,7 +107,7 @@ export const defaultMetadata: Metadata = {
     site: "@rsgrefrigeration",
   },
   verification: {
-    google: "google-site-verification-code-here",
+    google: "AWy_9cmDCkGiJ2BPe2YX6QJu5m3Wd03dgShsIZv6bfA",
   },
   other: {
     "geo.region": "IN-TG",

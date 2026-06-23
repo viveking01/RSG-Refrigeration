@@ -30,7 +30,7 @@ export default function EmergencyCTASection() {
 
           <div className="flex items-center justify-center gap-2 text-white/40 text-sm mb-10">
             <Clock size={13} />
-            <span>Mon – Sun: 8:00 AM – 8:00 PM | Emergency calls accepted anytime</span>
+            <span>Mon – Sat: 9:00 AM – 10:00 PM | Sun: 9:00 AM – 8:00 PM | Emergency calls accepted anytime</span>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
