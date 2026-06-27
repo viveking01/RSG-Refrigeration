@@ -577,6 +577,23 @@ const SERVICE_CONTENT: Record<string, {
     ],
     relatedSlugs: ["service", "deep-cleaning", "repair"],
   },
+  "copper-pipe-installation": {
+    heroSubtitle: "Advance copper pipeline installation services for split ACs. High-quality materials for perfect cooling.",
+    description: "Proper copper piping is essential for the efficient functioning of your split AC. RSG Refrigeration provides advance copper pipe installation services using gauge-tested, heavy-duty copper pipes and high-density insulation to prevent sweating and gas leakage. Whether it's a new installation, under-construction concealing, or replacing old corroded pipes, we ensure perfection.",
+    benefits: [
+      "Premium gauge-tested copper pipes",
+      "High-density nitrile rubber insulation",
+      "Leak-proof brazing and flaring",
+      "Concealed and surface wiring options",
+      "Pressure testing with nitrogen",
+      "Long-lasting durability",
+    ],
+    faqs: [
+      { question: "Why is good quality copper pipe important?", answer: "Low-quality copper pipes can develop micro-leaks leading to frequent gas charging, or they can corrode quickly. Good quality, proper gauge copper pipes ensure your AC holds gas for years and runs efficiently." },
+      { question: "Do you do concealed copper piping?", answer: "Yes, we do concealed copper piping for under-construction houses and renovations before the plastering is done." },
+    ],
+    relatedSlugs: ["installation", "gas-charging"],
+  },
 };
 
 export async function generateStaticParams() {

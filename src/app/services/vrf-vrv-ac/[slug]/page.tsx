@@ -128,6 +128,21 @@ const SERVICE_CONTENT: Record<string, {
     ],
     relatedSlugs: ["service", "repair", "gas-charging"],
   },
+  "copper-pipe-installation": {
+    heroSubtitle: "Advanced VRF/VRV copper piping networks. Y-joint brazing and multi-zone liquid line routing.",
+    description: "VRF and VRV systems require complex copper piping networks utilizing specialized refnet (Y-joint) branches to distribute refrigerant perfectly across dozens of indoor units. RSG Refrigeration guarantees factory-grade brazing under continuous nitrogen purge, preventing internal oxidation and compressor failure.",
+    benefits: [
+      "Refnet and header branching calculation and installation",
+      "Brazing under continuous dry nitrogen flow",
+      "550 PSI pressure holding test for 24 hours",
+      "Heavy-duty insulation to prevent thermal loss",
+      "Exact factory specifications for liquid and gas line sizing",
+    ],
+    faqs: [
+      { question: "Why is nitrogen purge necessary during VRF brazing?", answer: "Brazing copper creates internal soot (oxidation) which can flake off and clog the delicate electronic expansion valves (EEVs) in VRF systems. A continuous nitrogen flow prevents this soot from forming." },
+    ],
+    relatedSlugs: ["installation", "gas-charging"],
+  },
 };
 
 export async function generateStaticParams() {

@@ -128,6 +128,21 @@ const SERVICE_CONTENT: Record<string, {
     ],
     relatedSlugs: ["service", "repair", "gas-charging"],
   },
+  "copper-pipe-installation": {
+    heroSubtitle: "Heavy-duty copper piping installation for ductable AC systems. Engineered for long structural runs and central cooling.",
+    description: "Ductable ACs require robust, high-gauge copper piping designed to handle the higher operational pressures and long distance runs across commercial ceilings. RSG Refrigeration guarantees professional laying of properly sized, gauge-tested VRV/Ductable grade copper pipes, insulated thoroughly and structurally supported on GI trays or hangers.",
+    benefits: [
+      "Heavy gauge commercial grade copper tubes",
+      "Structural GI tray or threaded rod support systems",
+      "Super-thick nitrile rubber insulation for low temperatures",
+      "High-pressure nitrogen leak testing up to 600 PSI",
+      "Vacuum holding tests before commissioning",
+    ],
+    faqs: [
+      { question: "Do you lay pipes on cable trays?", answer: "Yes, for commercial spaces, we lay all copper refrigerant lines on GI cable trays or clamp them securely to the concrete slab to prevent sagging and stress on joints." },
+    ],
+    relatedSlugs: ["installation", "gas-charging"],
+  },
 };
 
 export async function generateStaticParams() {

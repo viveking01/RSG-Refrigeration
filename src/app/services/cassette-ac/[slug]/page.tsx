@@ -149,6 +149,22 @@ const SERVICE_CONTENT: Record<string, {
     ],
     relatedSlugs: ["service", "repair", "gas-charging"],
   },
+  "copper-pipe-installation": {
+    heroSubtitle: "Advance copper pipeline installation services for cassette ACs. High-quality materials for perfect cooling.",
+    description: "Proper copper piping is essential for the efficient functioning of your cassette AC. RSG Refrigeration provides advance copper pipe installation services using gauge-tested, heavy-duty copper pipes and high-density insulation to prevent sweating and gas leakage above false ceilings.",
+    benefits: [
+      "Premium gauge-tested copper pipes",
+      "High-density nitrile rubber insulation",
+      "Leak-proof brazing and flaring",
+      "Specialized routing above false ceilings",
+      "Pressure testing with nitrogen",
+      "Long-lasting durability",
+    ],
+    faqs: [
+      { question: "Why is insulation important for cassette AC piping?", answer: "Above false ceilings, uninsulated pipes can sweat and drip water onto the ceiling tiles, ruining the aesthetic and causing water damage. We use high-density insulation to prevent this." },
+    ],
+    relatedSlugs: ["installation", "gas-charging"],
+  },
 };
 
 export async function generateStaticParams() {
