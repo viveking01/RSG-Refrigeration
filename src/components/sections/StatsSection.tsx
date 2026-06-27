@@ -41,37 +41,25 @@ function Counter({ value, suffix, isDecimal }: { value: number; suffix: string; 
 
 export default function StatsSection() {
   return (
-    <section className="py-14 bg-hero relative overflow-hidden">
-      {/* Grid pattern overlay matching hero */}
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
-      {/* Ambient glow blobs */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-[#F5A623] opacity-5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-blue-400 opacity-5 blur-3xl pointer-events-none" />
-
+    <section className="py-14 bg-white relative">
       <div className="container-custom relative z-10">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#111827]">
             RSG Refrigeration by the Numbers
           </h2>
-          <p className="text-white/60 mt-2">Hyderabad&apos;s trusted AC service partner</p>
+          <p className="text-gray-500 mt-2">Hyderabad&apos;s trusted AC service partner</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-5 rounded-2xl bg-white/6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
+              className="text-center p-5 rounded-2xl bg-hero shadow-lg shadow-blue-900/10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className={`text-3xl font-bold mb-1 ${stat.color}`}>
                 <Counter value={stat.value} suffix={stat.suffix} isDecimal={stat.isDecimal} />
               </div>
-              <div className="text-white/70 text-xs font-semibold uppercase tracking-wider">{stat.label}</div>
+              <div className="text-white/80 text-xs font-semibold uppercase tracking-wider">{stat.label}</div>
             </div>
           ))}
         </div>

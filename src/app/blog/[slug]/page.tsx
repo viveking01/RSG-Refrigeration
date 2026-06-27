@@ -344,6 +344,89 @@ const POST_CONTENT: Record<string, {
       <strong>Solution:</strong> Do not try to turn it back on. Call an emergency technician immediately to test for electrical grounding.</p>
     `,
   },
+  "cost-of-ac-gas-filling-in-hyderabad": {
+    author: "Raju G.",
+    authorRole: "Senior HVAC Technician & Founder",
+    htmlContent: `
+      <p class="lead">Getting your AC gas refilled is a common requirement in Hyderabad, but many customers are unsure about the exact pricing. Prices vary significantly depending on the type of refrigerant gas your AC uses and the amount of gas lost.</p>
+      
+      <h2>1. Types of AC Refrigerant Gas</h2>
+      <p>Before checking the prices, you must know which gas your AC uses. This is usually printed on a sticker on the outdoor unit:</p>
+      <ul>
+        <li><strong>R22 (Freon):</strong> Found in older ACs (pre-2015). It is being phased out globally and is getting expensive.</li>
+        <li><strong>R32:</strong> The most common gas in modern inverter ACs. Highly efficient and eco-friendly.</li>
+        <li><strong>R410A:</strong> Common in non-inverter and some inverter models built between 2015-2020.</li>
+      </ul>
+
+      <h2>2. AC Gas Filling Costs in Hyderabad (2026)</h2>
+      <p>Here are the standard market rates for a <strong>Full Gas Charge</strong> (when the system is completely empty):</p>
+      <table class="w-full border-collapse my-6 text-sm text-left">
+        <thead>
+          <tr class="bg-gray-100 border-b border-gray-200">
+            <th class="p-3 font-semibold">Gas Type</th>
+            <th class="p-3 font-semibold">1.0 Ton AC</th>
+            <th class="p-3 font-semibold">1.5 Ton AC</th>
+            <th class="p-3 font-semibold">2.0 Ton AC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100">
+            <td class="p-3 font-medium text-blue-800">R22 Gas</td>
+            <td class="p-3">₹2,000 - ₹2,200</td>
+            <td class="p-3">₹2,400 - ₹2,600</td>
+            <td class="p-3">₹2,800 - ₹3,000</td>
+          </tr>
+          <tr class="border-b border-gray-100">
+            <td class="p-3 font-medium text-blue-800">R32 Gas</td>
+            <td class="p-3">₹2,200 - ₹2,400</td>
+            <td class="p-3">₹2,500 - ₹2,800</td>
+            <td class="p-3">₹3,000 - ₹3,300</td>
+          </tr>
+          <tr class="border-b border-gray-100">
+            <td class="p-3 font-medium text-blue-800">R410A Gas</td>
+            <td class="p-3">₹2,400 - ₹2,600</td>
+            <td class="p-3">₹2,600 - ₹2,900</td>
+            <td class="p-3">₹3,200 - ₹3,500</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. What About "Gas Top-Ups"?</h2>
+      <p>If your AC is only slightly low on gas, you might only need a top-up rather than a full refill. Top-ups generally cost between <strong>₹1,200 to ₹1,800</strong> depending on how much gas is needed to reach the optimal pressure (usually 120-150 PSI for R32).</p>
+
+      <div class="bg-blue-50 border-l-4 border-[#0B1F66] p-4 my-6 rounded-r-xl text-sm">
+        <strong>Expert Warning:</strong> Never let a technician fill gas without fixing the leak first. ACs operate on a closed-loop system. If the gas is low, there is a leak (usually at the copper pipe flare joints). Filling gas without fixing the leak means you'll have to pay for gas again in a few months!
+      </div>
+    `,
+  },
+  "split-ac-vs-inverter-ac-electricity-savings": {
+    author: "Raju G.",
+    authorRole: "Senior HVAC Technician & Founder",
+    htmlContent: `
+      <p class="lead">If you are planning to buy a new AC in Hyderabad, you are probably wondering if paying extra for an "Inverter AC" is actually worth it. How much electricity does it really save compared to a normal (non-inverter) split AC?</p>
+
+      <h2>1. How a Normal Split AC Works</h2>
+      <p>A normal (fixed-speed) AC compressor only has two modes: <strong>100% ON or 100% OFF</strong>. When you set the temperature to 24°C, the compressor runs at maximum power until the room reaches 24°C, then it shuts off completely. When the room warms up to 26°C, it kicks back on at maximum power. This constant starting and stopping consumes a massive amount of electricity.</p>
+
+      <h2>2. How an Inverter AC Works</h2>
+      <p>An inverter AC works like the accelerator pedal in a car. It has a variable-speed compressor. When you set the AC to 24°C, it runs at high speed to cool the room quickly. Once the room reaches 24°C, it does not shut off; instead, it slows down to a steady, low-power state just to maintain the temperature. This smooth operation eliminates power spikes.</p>
+
+      <h2>3. The Real-World Electricity Savings</h2>
+      <p>In Hyderabad's summer, if you run your AC for 8 hours a night:</p>
+      <ul>
+        <li><strong>Normal 1.5 Ton 3-Star AC:</strong> Consumes about 1.5 to 1.8 Units per hour. That's around 12-14 Units per night.</li>
+        <li><strong>Inverter 1.5 Ton 5-Star AC:</strong> Consumes about 0.7 to 0.9 Units per hour once the room is cooled. That's around 6-8 Units per night.</li>
+      </ul>
+      <p><strong>Conclusion:</strong> An inverter AC uses roughly <strong>30% to 40% less electricity</strong> than a normal AC.</p>
+
+      <h2>4. Is It Worth The Extra Cost?</h2>
+      <p>An inverter AC usually costs ₹5,000 to ₹8,000 more upfront than a normal AC. However, if you use your AC for more than 4 hours a day, the electricity savings will recover that extra cost within the first 8 to 12 months. After that, you are saving thousands of rupees every year.</p>
+
+      <div class="bg-blue-50 border-l-4 border-[#0B1F66] p-4 my-6 rounded-r-xl text-sm">
+        <strong>Maintenance Tip:</strong> Inverter ACs have complex, expensive electronic motherboards (PCBs) in the outdoor unit. It is highly recommended to use a good quality voltage stabilizer to protect these sensitive electronics from Hyderabad's power fluctuations.
+      </div>
+    `,
+  },
 };
 
 export async function generateStaticParams() {
